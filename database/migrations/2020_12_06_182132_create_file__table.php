@@ -14,7 +14,12 @@ class CreateFileTable extends Migration
     public function up()
     {
         Schema::create('files', function (Blueprint $table) {
-            $table->id();
+            $table->id('file_id');
+            $table->string('file_title',250);
+            $table->text('file_description');
+            $table->string('file_type');
+            $table->string('file_name');
+            $table->float('file_size');
             $table->timestamps();
         });
     }
