@@ -7,6 +7,7 @@ DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/bootstrap-rtl.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin_custom.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,6 +21,9 @@ DOCTYPE html>
 
       </div>
 
+      <div>
+
+      </div>
 
 
       <script src="/js/jquery-3.5.1.slim.min.js"></script>
