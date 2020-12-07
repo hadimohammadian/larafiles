@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\Routing\Route as RoutingRoute;
 
@@ -22,4 +23,9 @@ Route::get('/', function () {
 Route::get('/admin', function () {
 
     return view('admin.dashboard.index');
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+        Route::get('/user','App\Http\Controllers\UserController@index');
 });
