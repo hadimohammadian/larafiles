@@ -9,7 +9,7 @@ class usercontroller extends Controller
 {
     public function index()
     {
-        return view('admin.user.index');
+        return view('admin.user.index')->with(['panel_title'=>'لیست کاربران']);
 
     }
 
@@ -17,6 +17,6 @@ class usercontroller extends Controller
 
     public function create(){
 
-        return view('admin.user.create');
+        return view('admin.user.create')->with(['panel_title'=>'ثبت کاربران']);
     }
 }
