@@ -29,4 +29,5 @@ Route::get('/admin', function () {
 Route::group(['prefix' => 'admin'], function () {
         Route::get('/user','App\Http\Controllers\Admin\UserController@index')->name('admin.users.list');
         Route::get('/user/create','App\Http\Controllers\Admin\UserController@create')->name('admin.users.create');
+        Route::post('/user/create','App\Http\Controllers\Admin\UserController@store')->name('admin.users.store');
 });
