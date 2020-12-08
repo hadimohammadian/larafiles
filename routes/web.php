@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserController\admin;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\Routing\Route as RoutingRoute;
 
@@ -22,10 +22,11 @@ Route::get('/', function () {
 
 Route::get('/admin', function () {
 
-    return view('admin.dashboard.index');
+    return view('admin.dashboard.index')->name('dashboard');
 });
 
 
 Route::group(['prefix' => 'admin'], function () {
-        Route::get('/user','App\Http\Controllers\UserController@index');
+        Route::get('/user','App\Http\Controllers\Admin\UserController@index')->name('admin.users.list');
+        Route::get('/user/create','App\Http\Controllers\Admin\UserController@create')->name('admin.users.create');
 });
