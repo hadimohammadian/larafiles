@@ -21,7 +21,7 @@ class usercontroller extends Controller
     }
 
     public function store(){
+            dd(request()->all());
 
-dd('sdfsd');
     }
 }
