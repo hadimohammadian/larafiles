@@ -2,9 +2,9 @@
 
 @csrf
     <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">نام کامل</span>
+        <span class="input-group-text" id="name">نام کامل</span>
         <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default" id="FullName" name="FullName">
+            aria-describedby="inputGroup-sizing-default" id="name" name="name">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">ایمیل</span>
