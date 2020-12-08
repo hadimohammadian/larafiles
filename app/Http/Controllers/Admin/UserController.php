@@ -19,4 +19,9 @@ class usercontroller extends Controller
 
         return view('admin.user.create')->with(['panel_title'=>'ثبت کاربران']);
     }
+
+    public function store(){
+
+dd('sdfsd');
+    }
 }
