@@ -36,7 +36,9 @@ class usercontroller extends Controller
 
 
 
-         User::create($user_data);
+        $new_user_object =  User::create($user_data);
+        dd($new_user_object);
+        
 
     }
 }
