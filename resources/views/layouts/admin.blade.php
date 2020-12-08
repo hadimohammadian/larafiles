@@ -19,7 +19,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    @yield('content')
+                    <div class="m-3 text-right">
+                        <div class="card">
+                            <div class="card-header">
+
+                                {{isset($panel_title)? $panel_title : ''}}
+                            </div>
+                            <div class="card-body">
+
+                                @yield('content')
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
