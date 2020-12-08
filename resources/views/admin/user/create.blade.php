@@ -4,9 +4,6 @@
 
 
 @section('content')
-
-<h1>
-    ثبت کاربر جدید
-</h1>
+ @include('admin.user.form')
 
 @endsection
