@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
 
 class usercontroller extends Controller
@@ -21,7 +23,20 @@ class usercontroller extends Controller
     }
 
     public function store(){
-            dd(request()->all());
+
+        $user_data = [
+
+            'name' => request()->input('name'),
+            'email' => request()->input('email'),
+            'password' => request()->input('password'),
+            'role' => request()->input('role'),
+            'wallet' => request()->input('wallet'),
+
+        ];
+
+
+
+         User::create($user_data);
 
     }
 }
