@@ -1,3 +1,5 @@
+@include('admin.partials.errors')
+
 <form action="" method="POST">
 
 @csrf
