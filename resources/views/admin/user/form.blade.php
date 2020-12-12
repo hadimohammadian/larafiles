@@ -38,7 +38,7 @@
         <span class="input-group-text" id="inputGroup-sizing-default">موجودی کیف پول</span>
         <span class="input-group-text">تومان</span>
         <input type="number" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default" id="wallet" name="wallet" value="{{ old('wallet') }}">
+            aria-describedby="inputGroup-sizing-default" id="wallet" name="wallet" value="{{ old('wallet',0) }}">
     </div>
 
 
