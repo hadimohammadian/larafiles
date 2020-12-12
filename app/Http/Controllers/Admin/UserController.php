@@ -24,6 +24,14 @@ class usercontroller extends Controller
 
     public function store(){
 
+        $this->validate(request(),[
+
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6|max:12',
+
+        ]);
+
         $user_data = [
 
             'name' => request()->input('name'),
@@ -38,7 +46,7 @@ class usercontroller extends Controller
 
         $new_user_object =  User::create($user_data);
         dd($new_user_object);
-        
+
 
     }
 }
