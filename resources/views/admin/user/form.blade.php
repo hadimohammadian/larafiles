@@ -6,23 +6,24 @@
     <div class="input-group mb-3">
         <span class="input-group-text" id="name">نام کامل</span>
         <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default" id="name" name="name">
+            aria-describedby="inputGroup-sizing-default" id="name" name="name" value="{{ old('name')}}">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">ایمیل</span>
         <input type="email" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default" id="email" name="email">
+            aria-describedby="inputGroup-sizing-default" id="email" name="email"
+             value="{{old('email')}}">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">کلمه عبور</span>
         <input type="password" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default" id="password" name="password">
+            aria-describedby="inputGroup-sizing-default" id="password" name="password" value="{{old('password')}}">
     </div>
 
 
     <div class="input-group mb-3">
         <label class="input-group-text" for="inputGroupSelect02">نقش کاربری</label>
-        <select class="form-control " id="role" name="role">
+        <select class="form-control " id="role" name="role" >
             <option selected>انتخاب ...</option>
             <option value="1">مدیر</option>
             <option value="2">اپراتور</option>
@@ -37,7 +38,7 @@
         <span class="input-group-text" id="inputGroup-sizing-default">موجودی کیف پول</span>
         <span class="input-group-text">تومان</span>
         <input type="number" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default" id="wallet" name="wallet">
+            aria-describedby="inputGroup-sizing-default" id="wallet" name="wallet" value="{{ old('wallet') }}">
     </div>
 
 
