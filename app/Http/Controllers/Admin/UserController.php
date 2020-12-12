@@ -30,6 +30,14 @@ class usercontroller extends Controller
             'email' => 'required|email',
             'password' => 'required|min:6|max:12',
 
+        ],[
+            'name.required' => 'وارد کردن نام الزامی است',
+            'email.required' => 'وارد کردن ایمیل الزامی است',
+            'email.email' => 'حتما ایمیل وارد کنید',
+            'password.required' => 'وارد کردن رمز عبور الزامی است',
+            'password.min' => 'کمترین مقدار 6 می باشد',
+            'password.max' => 'بیشتربن مقدار 12 می باشد',
+
         ]);
 
         $user_data = [
