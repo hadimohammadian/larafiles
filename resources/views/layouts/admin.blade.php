@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/css/bootstrap-rtl.min.css">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/admin_custom.css">
+        <link rel="stylesheet" href="/css/all.min.css">
         <title>Document</title>
     </head>
 
@@ -47,7 +48,7 @@
         <script src="/js/jquery-3.5.1.slim.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootstrap.bundle.min.js"></script>
-
+        <script src="/js/all.min.js"></script>
 
     </body>
 
