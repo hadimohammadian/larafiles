@@ -60,7 +60,7 @@ class usercontroller extends Controller
         $new_user_object =  User::create($user_data);
         // dd($new_user_object);
         if($new_user_object instanceof User){
-            return redirect()->route('admin.users.list');
+            return redirect()->route('admin.users.list')->with('success',true);
         }
 
 
