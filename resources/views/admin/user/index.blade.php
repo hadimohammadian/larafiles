@@ -11,6 +11,7 @@
           <th scope="col">نام</th>
           <th scope="col">نام خانوادگی</th>
           <th scope="col">متن</th>
+          <th scope="col">عملیات</th>
         </tr>
       </thead>
       <tbody>
@@ -18,13 +19,8 @@
 
 
         @foreach ($allusers as $item)
+        @include('admin.user.item',$item)
 
-        <tr>
-          <th scope="row">{{ $item->id }}</th>
-          <td>{{ $item->name }}</td>
-          <td>{{ $item->email }}</td>
-          <td>{{ $item->wallet}}</td>
-        </tr>
         @endforeach
         @endif
       </tbody>
