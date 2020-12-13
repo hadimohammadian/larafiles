@@ -79,4 +79,21 @@ class usercontroller extends Controller
 
 
     }
+
+
+    public function edit($user_id){
+        if ($user_id && ctype_digit($user_id)) {
+            $userItem = User::find($user_id);
+            if ($userItem instanceof User && $userItem) {
+                return view('admin.user.edit', compact('userItem'))->with(['panel_title'=>'ویرایش کاربران']);
+            }
+        }
+    }
+
+
+    public function update($user_id){
+
+
+
+    }
 }
