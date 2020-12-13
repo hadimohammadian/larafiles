@@ -12,7 +12,9 @@ class usercontroller extends Controller
 {
     public function index()
     {
-        return view('admin.user.index')->with(['panel_title'=>'لیست کاربران']);
+        $allusers = User::all();
+        // return view('admin.user.index')->with(['panel_title'=>'لیست کاربران','user'=>$users]);
+        return view('admin.user.index',compact('allusers'))->with(['panel_title'=>'لیست کاربران']);
 
     }
 
@@ -56,7 +58,8 @@ class usercontroller extends Controller
 
 
         $new_user_object =  User::create($user_data);
-        dd($new_user_object);
+        // dd($new_user_object);
+
 
 
     }
