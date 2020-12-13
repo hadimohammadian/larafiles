@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
@@ -22,15 +23,15 @@ class usercontroller extends Controller
         return view('admin.user.create')->with(['panel_title'=>'ثبت کاربران']);
     }
 
-    public function store(){
+    public function store(UserRequest $userRequest){
 
-        $this->validate(request(),[
+        // $this->validate(request(),[
 
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|min:6|max:12',
+        //     'name' => 'required',
+        //     'email' => 'required|email',
+        //     'password' => 'required|min:6|max:12',
 
-        ]
+        // ]
         // ,[
         //     'name.required' => 'وارد کردن نام الزامی است',
         //     'email.required' => 'وارد کردن ایمیل الزامی است',
@@ -40,7 +41,7 @@ class usercontroller extends Controller
         //     'password.max' => 'بیشتربن مقدار 12 می باشد',
 
         // ]
-    );
+// );
 
         $user_data = [
 
