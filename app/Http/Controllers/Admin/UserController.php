@@ -65,4 +65,18 @@ class usercontroller extends Controller
 
 
     }
+
+    public function delete($user_id){
+
+        if($user_id && ctype_digit($user_id)){
+
+            $userItem = User::find($user_id);
+            if($userItem instanceof User){
+                $userItem->delete();
+            }
+            return redirect()->route('admin.users.list')->with('deleted',true);
+        }
+
+
+    }
 }
