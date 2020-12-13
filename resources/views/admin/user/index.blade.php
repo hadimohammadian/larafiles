@@ -2,6 +2,7 @@
 
 
 @section('content')
+@include('admin.user.notification')
 
 <table class="table table-hover">
     <thead>
