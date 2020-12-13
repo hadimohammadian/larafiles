@@ -6,3 +6,12 @@
 
 
 @endif
+
+@if(session('deleted'))
+
+<div class="alert alert-danger" role="alert">
+    <strong>کاربر با موفقیت حذف گردید</strong>
+</div>
+
+
+@endif
