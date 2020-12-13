@@ -13,6 +13,8 @@
         </tr>
       </thead>
       <tbody>
+@if ($allusers && count($allusers)> 0 )
+
 
         @foreach ($allusers as $item)
 
@@ -23,6 +25,7 @@
           <td>{{ $item->wallet}}</td>
         </tr>
         @endforeach
+        @endif
       </tbody>
   </table>
 @endsection
