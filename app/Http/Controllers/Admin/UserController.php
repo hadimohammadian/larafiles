@@ -45,11 +45,11 @@ class usercontroller extends Controller
 
         $user_data = [
 
-            'name' => request()->input('name'),
-            'email' => request()->input('email'),
-            'password' => request()->input('password'),
-            'role' => request()->input('role'),
-            'wallet' => request()->input('wallet'),
+            'name' => $userRequest->input('name'),
+            'email' => $userRequest->input('email'),
+            'password' => $userRequest->input('password'),
+            'role' => $userRequest->input('role'),
+            'wallet' => $userRequest->input('wallet'),
 
         ];
 
