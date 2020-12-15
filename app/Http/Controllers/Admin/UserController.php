@@ -91,10 +91,19 @@ class usercontroller extends Controller
     }
 
 
-    public function update($user_id){
+    public function update($user_id,Request $userRequest){
 
 
-        $inputs = request()->except('_token');
+       // $inputs = request()->except('_token');
+       $inputs = [
+
+        'name' => $userRequest->input('name'),
+        'email' => $userRequest->input('email'),
+        'password' => $userRequest->input('password'),
+        'role' => $userRequest->input('role'),
+        'wallet' => $userRequest->input('wallet'),
+
+    ];
         if(empty(request()->input('password'))){
             unset($inputs['password']);
         }
