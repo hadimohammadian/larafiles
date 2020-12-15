@@ -1,7 +1,7 @@
 @if(session('success'))
 
 <div class="alert alert-success" role="alert">
-    <strong>کاربر جدید با موفقیت ثبت گردید</strong>
+    <strong>{{ session('success') }}</strong>
 </div>
 
 
@@ -10,7 +10,7 @@
 @if(session('deleted'))
 
 <div class="alert alert-danger" role="alert">
-    <strong>کاربر با موفقیت حذف گردید</strong>
+    <strong>{{ session('deleted') }}</strong>
 </div>
 
 

@@ -60,7 +60,7 @@ class usercontroller extends Controller
         $new_user_object =  User::create($user_data);
         // dd($new_user_object);
         if($new_user_object instanceof User){
-            return redirect()->route('admin.users.list')->with('success',true);
+            return redirect()->route('admin.users.list')->with('success',' کاربر  '.$user_data['email'].'  با موفقیت ایجاد گردید');
         }
 
 
@@ -74,7 +74,7 @@ class usercontroller extends Controller
             if($userItem instanceof User){
                 $userItem->delete();
             }
-            return redirect()->route('admin.users.list')->with('deleted',true);
+            return redirect()->route('admin.users.list')->with('deleted','کاربر با موفقیت حذف گردید');
         }
 
 
@@ -105,14 +105,15 @@ class usercontroller extends Controller
 
     ];
 
-     
+
         // if(empty(request()->input('password'))){
         if(!($inputs['password'])){
             unset($inputs['password']);
         }
          $userItem = User::find($user_id);
          $userItem->update($inputs);
-         return redirect()->back()->with('success',true);
+        //  return redirect()->back()->with('success',true);
+        return redirect()->route('admin.users.list')->with('success',' ویرایش اطلاعات '.$inputs['email']. ' انجام شد ');
 
     }
 }
