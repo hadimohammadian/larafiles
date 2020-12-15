@@ -104,7 +104,8 @@ class usercontroller extends Controller
         'wallet' => $userRequest->input('wallet'),
 
     ];
-        if(empty(request()->input('password'))){
+        // if(empty(request()->input('password'))){
+        if(!($inputs['password'])){
             unset($inputs['password']);
         }
          $userItem = User::find($user_id);
