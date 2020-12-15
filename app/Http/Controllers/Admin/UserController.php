@@ -94,6 +94,13 @@ class usercontroller extends Controller
     public function update($user_id){
 
 
+        $inputs = request()->except('_token');
+        if(empty(request()->input('password'))){
+            unset($inputs['password']);
+        }
+         $userItem = User::find($user_id);
+         $userItem->update($inputs);
+         return redirect()->back()->with('success',true);
 
     }
 }
