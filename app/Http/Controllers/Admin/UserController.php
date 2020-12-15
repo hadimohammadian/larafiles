@@ -91,7 +91,7 @@ class usercontroller extends Controller
     }
 
 
-    public function update($user_id,Request $userRequest){
+    public function update($user_id,UserRequest $userRequest){
 
 
        // $inputs = request()->except('_token');
@@ -104,6 +104,8 @@ class usercontroller extends Controller
         'wallet' => $userRequest->input('wallet'),
 
     ];
+
+     
         // if(empty(request()->input('password'))){
         if(!($inputs['password'])){
             unset($inputs['password']);
