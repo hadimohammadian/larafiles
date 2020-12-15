@@ -23,12 +23,19 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $inputs =  [
 
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:6|max:12',
         ];
+
+        if(request()->route('user_id') && intval(request()->route('user_id')) > 0){
+
+            unset($inputs['password']);
+        }
+
+        return $inputs;
     }
 
 
