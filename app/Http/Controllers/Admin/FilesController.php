@@ -13,4 +13,9 @@ class FilesController extends Controller
         $files = File::all();
         return view('admin.File.list',compact('files'))->with(['panel_title' => 'لیست فایل ها']);
     }
+
+    public function create(){
+
+        return view('admin.File.create')->with('panel_title','ایجاد فایل جدید ');
+    }
 }
