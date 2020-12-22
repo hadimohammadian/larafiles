@@ -41,4 +41,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/files', 'App\Http\Controllers\admin\FilesController@index')->name('admin.files.list');
 
         Route::get('/files/create', 'App\Http\Controllers\admin\FilesController@create')->name('admin.files.create');
+        Route::post('/files/create', 'App\Http\Controllers\admin\FilesController@store')->name('admin.files.store');
+
+        Route::get('/files/edit/{file_id}', 'App\Http\Controllers\admin\FilesController@edit')->name('admin.files.edit');
+        Route::post('/files/edit/{file_id}', 'App\Http\Controllers\admin\FilesController@update')->name('admin.files.update');
+
+
 });
