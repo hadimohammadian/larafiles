@@ -39,4 +39,6 @@ Route::group(['prefix' => 'admin'], function () {
         //Files Routre
 
         Route::get('/files', 'App\Http\Controllers\admin\FilesController@index')->name('admin.files.list');
+
+        Route::get('/files/create', 'App\Http\Controllers\admin\FilesController@create')->name('admin.files.create');
 });
