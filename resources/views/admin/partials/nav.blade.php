@@ -30,7 +30,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">ثبت فایل جدید</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">لیست فایل ها</a>
+            <a class="dropdown-item" href="{{ route('admin.files.list') }}">لیست فایل ها</a>
 
 
           </div>
