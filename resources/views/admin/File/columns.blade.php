@@ -6,6 +6,6 @@
     <td>{{ $item->file_name}}</td>
 
     <td style="text-align: center">
-        @include('admin.user.operation')
+        @include('admin.File.operations')
     </td>
   </tr>

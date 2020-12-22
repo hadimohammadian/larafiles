@@ -1,5 +1,5 @@
 <tr>
-    <th scope="col">#</th>
+  
     <th scope="col">شناسه</th>
     <th scope="col">عنوان</th>
     <th scope="col">نوع</th>
