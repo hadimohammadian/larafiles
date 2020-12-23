@@ -1,6 +1,6 @@
 @include('admin.partials.errors')
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
 
 @csrf
     <div class="input-group mb-3">
@@ -17,7 +17,10 @@
 
     </div>
 
-   
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="file_title">فایل</span>
+       <input type="file" name="fileItem" id="fileItem" class="form-control">
+    </div>
 
     <div>
         <button class="btn btn-success" type="submit">ذخیره اطلاعات</button>
