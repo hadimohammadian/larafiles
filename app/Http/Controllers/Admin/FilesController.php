@@ -28,5 +28,20 @@ class FilesController extends Controller
             'file_title.required' => 'وارد کردن نام فایل الزامی است',
             'fileItem.required' => 'وارد کردن فایل الزامی است',
         ]);
+
+        $new_file_data = [
+
+             'file_title' => $request->input('file_title'),
+                'file_description' => $request->input('file_description'),
+                'file_type' => $request->file('fileItem')->getMimeType(),
+                'file_size' => $request->file('fileItem')->getSize(),
+
+            ];
+
+
+            dd($new_file_data);
+
+
+
     }
 }
