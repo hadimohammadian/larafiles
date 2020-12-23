@@ -10,8 +10,8 @@
     </div>
 
     <div class="input-group mb-3">
-        <span class="input-group-text" id="file_descrition">توضیحات فایل</span>
-        <textarea name="file_descrition" class="form-control" id="file_descrition" cols="30" rows="10">
+        <span class="input-group-text" id="file_description">توضیحات فایل</span>
+        <textarea name="file_description" class="form-control" id="file_description" cols="30" rows="10">
             {{old('email',isset($fileItem)? $fileItem->file_descrition: '')}}
         </textarea>
 
