@@ -18,4 +18,15 @@ class FilesController extends Controller
 
         return view('admin.File.create')->with('panel_title','ایجاد فایل جدید ');
     }
+
+    public function store(Request $request){
+
+        $this->validate($request, [
+            'file_title' => 'required',
+            'fileItem' => 'required'
+        ],[
+            'file_title.required' => 'وارد کردن نام فایل الزامی است',
+            'fileItem.required' => 'وارد کردن فایل الزامی است',
+        ]);
+    }
 }
