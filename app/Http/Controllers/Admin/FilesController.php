@@ -37,7 +37,7 @@ class FilesController extends Controller
                 'file_size' => $request->file('fileItem')->getSize(),
 
             ];
-
+            $request->file('fileItem')->store('files/image');
 
             dd($new_file_data);
 
