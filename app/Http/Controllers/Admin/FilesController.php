@@ -53,7 +53,9 @@ class FilesController extends Controller
         $new_file_name = $file_hash_name.'-'. $time  .'.'. $file_extention;
 
 
-        $request->file('fileItem')->storeAs('images', $new_file_name);
+        // $request->file('fileItem')->storeAs('images', $new_file_name);
+
+    $request->file('fileItem')->move(public_path('Upload_Images'),$new_file_name);
 
 
     }
