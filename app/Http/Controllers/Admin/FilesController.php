@@ -7,8 +7,10 @@ use App\Models\File;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use DateTime;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
+use Symfony\Component\HttpFoundation\File\File as tree;
 use Symfony\Component\VarDumper\Cloner\Data;
 
 class FilesController extends Controller
@@ -34,29 +36,30 @@ class FilesController extends Controller
             'fileItem.required' => 'وارد کردن فایل الزامی است',
         ]);
 
-        $new_file_data = [
-
-             'file_title' => $request->input('file_title'),
-                'file_description' => $request->input('file_description'),
-                'file_type' => $request->file('fileItem')->getMimeType(),
-                'file_size' => $request->file('fileItem')->getSize(),
-
-            ];
-        // $request->file('fileItem')->store('files/image');
-
         $file_extention = $request->file('fileItem')->getClientOriginalExtension();
-       // $time = Carbon::now()->format('Y/m/d-H:i:s') ;
-       $time = '';
+        // $time = Carbon::now()->format('Y/m/d-H:i:s') ;
+        $time = '';
 
 
         $file_hash_name = Str::random(40);
         $new_file_name = $file_hash_name.'-'. $time  .'.'. $file_extention;
 
+        $new_file_data = [
 
-        // $request->file('fileItem')->storeAs('images', $new_file_name);
+            'file_title' => $request->input('file_title'),
+            'file_description' => $request->input('file_description'),
+            'file_type' => $request->file('fileItem')->getMimeType(),
+            'file_size' => $request->file('fileItem')->getSize(),
+            'file_name' => $new_file_name,
 
-    $request->file('fileItem')->move(public_path('Upload_Images'),$new_file_name);
+        ];
 
+        $request = $request->file('fileItem')->move(public_path('Upload_Images'), $new_file_name);
 
+        if ($request instanceof  \Symfony\Component\HttpFoundation\File\File) {
+         //   $new_file_data['file_name'] = $new_file_name;
+         // dd($new_file_data);
+            File::create($new_file_data);
+        }
     }
 }
