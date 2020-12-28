@@ -16,7 +16,11 @@
                     @include('admin.plan.columns',$item)
 
                 @endforeach
-            @endif
+
+            @else
+            @include('admin.plan.Column_noItem')
+                @endif
+
         </tbody>
     </table>
 
