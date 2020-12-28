@@ -52,5 +52,6 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/plans/create', 'App\Http\Controllers\admin\PlansController@store')->name('admin.plan.store');
         Route::get('/plans/edit/{plan_id}', 'App\Http\Controllers\admin\PlansController@edit')->name('admin.plan.edit');
         Route::post('/plans/edit/{plan_id}', 'App\Http\Controllers\admin\PlansController@update')->name('admin.plan.update');
+        Route::get('/plans/remove/{plan_id}', 'App\Http\Controllers\admin\PlansController@remove')->name('admin.plan.remove');
 
 });
