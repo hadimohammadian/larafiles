@@ -2,12 +2,13 @@
 
 @section('content')
 
+@include('admin.partials.notification')
     <table class="table table-hover">
         <thead>
           @include('admin.plan.columnsHeader')
         </thead>
         <tbody>
-            @if ($plans && count($files) > 0)
+            @if ($plans && count($plans) > 0)
 
 
                 @foreach ($plans as $item)
