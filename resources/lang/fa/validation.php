@@ -131,6 +131,13 @@ return [
         "available" => "موجود",
         "size" => "اندازه",
 		"file" => "فایل",
-		"fullname" => "نام کامل"
+        "fullname" => "نام کامل",
+
+        'plan_title'=>'عنوان طرح',
+        'plan_limit_download_count' =>'محدودیت دانلود روزانه        ',
+        'plan_price' =>'قیمت',
+        'plan_days_count'=>'تعداد روز اعتبار',
+
+
     ],
 ];
