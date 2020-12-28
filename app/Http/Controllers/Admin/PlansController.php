@@ -83,4 +83,19 @@ class PlansController extends Controller
             return redirect()->route('admin.plan.list')->with('success', 'اطلاعات طرح با موفقیت بروزرسانی گردید');
         }
     }
+
+
+    public function remove(Request $request, $plan_id){
+
+
+        $plan_id = intval($plan_id);
+
+        $planItem = Plan::find($plan_id);
+
+       if($planItem){
+           $planItem->delete();
+           return redirect()->route('admin.plan.list')->with('deleted', 'اطلاعات طرح با موفقیت حذف گردید');
+       }
+
+    }
 }
