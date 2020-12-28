@@ -39,12 +39,18 @@ Route::group(['prefix' => 'admin'], function () {
         //Files Routre
 
         Route::get('/files', 'App\Http\Controllers\admin\FilesController@index')->name('admin.files.list');
-
         Route::get('/files/create', 'App\Http\Controllers\admin\FilesController@create')->name('admin.files.create');
         Route::post('/files/create', 'App\Http\Controllers\admin\FilesController@store')->name('admin.files.store');
-
         Route::get('/files/edit/{file_id}', 'App\Http\Controllers\admin\FilesController@edit')->name('admin.files.edit');
         Route::post('/files/edit/{file_id}', 'App\Http\Controllers\admin\FilesController@update')->name('admin.files.update');
 
+
+        //plans Route
+
+        Route::get('/plans', 'App\Http\Controllers\admin\PlansController@index')->name('admin.plan.list');
+        Route::get('/plans/create', 'App\Http\Controllers\admin\PlansController@create')->name('admin.plan.create');
+        Route::post('/plans/create', 'App\Http\Controllers\admin\PlansController@store')->name('admin.plan.store');
+        Route::get('/plans/edit/{plan_id}', 'App\Http\Controllers\admin\PlansController@edit')->name('admin.plan.edit');
+        Route::post('/plans/edit/{plan_id}', 'App\Http\Controllers\admin\PlansController@update')->name('admin.plan.update');
 
 });
