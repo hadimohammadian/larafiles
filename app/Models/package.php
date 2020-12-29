@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class package extends Model
 {
-    use HasFactory;
+    protected $primaryKey = 'package_id';
+    protected $guarded = ['package_id'];
+
+
+    public function files(){
+
+        return $this->belongsToMany(File::class,'package_file','package_id','file_id');
+        
+    }
+
 }
